@@ -1,0 +1,32 @@
+.list_header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.list_header .left-side{}
+.list_header .right-side{}
+
+.form_header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.form_header .left-side{}
+.form_header .right-side{
+  display: flex;
+  justify-content: flex-start;
+}
+.form_header .right-side button{
+  margin-right: 5px;
+}
+
+.utils-form-container{}
+
+.loading-body{
+  text-align: center;
+  background:none;
+  border: none;
+  color: white;
+}
