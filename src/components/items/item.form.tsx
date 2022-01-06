@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Input, Label, Col, NavLink } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Form, FormGroup, Input, Label, Col } from "reactstrap";
 
 import {ItemData,ItemMetadata} from'./../../models/items.type'
 

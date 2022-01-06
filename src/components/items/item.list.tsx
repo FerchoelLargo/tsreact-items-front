@@ -10,6 +10,7 @@ import item_default_value from './../../models/items.type';
 
 import ItemPreview from './item.preview';
 import ListHeader from "../utils/list.header";
+import Loading from './../utils/modal.loading';
 
 import './items.css'
 
@@ -19,6 +20,7 @@ const ItemList = ({ }: AppProps) => {
   const [ items_list, setItemList] = useState< Array<ItemData> >([])
   const [ preview_visible , setPreviewVisible ] = useState<boolean>(false);
   const [ item_previewing , setItemPreviewing ] = useState<ItemMetadata>(item_default_value);
+  const [ loading , setLoading] = useState(false);
 
   const chekItem = (e:any,index:any) =>{
     console.log(e.target.checked,index)
@@ -50,10 +52,12 @@ const ItemList = ({ }: AppProps) => {
   }
 
   useEffect(() => {
+    setLoading(true);
     ItemDataService.getAll()
       .then((response: any) => {
         console.log('OK', response.data);
         setItemList(response.data)
+        setLoading(false);
       })
       .catch((e: Error) => {
         console.log("Error", e);
@@ -65,6 +69,8 @@ const ItemList = ({ }: AppProps) => {
     <div>
       <ItemPreview visible={preview_visible} data={item_previewing} toggleHandler={toggleHandler} />
       {
+        loading ? 
+        <Loading visible={loading} /> :
         items_list.length > 0 ?
         <Fragment>
           <ListHeader link="/items/details?sys_id=-1" label="Items" />

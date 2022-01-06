@@ -19,7 +19,7 @@ class ItemDataService {
   }
 
   delete(id: any) {
-    return http.delete<any>(`${path}${id}`);
+    return http.delete<any>(`${path}${id}/`);
   }
 
   deleteAll() {
@@ -31,7 +31,6 @@ class ItemDataService {
   }
 
   findByUnique(unique: string) {
-    console.log(`${path}?uniqueValue=${unique}`)
     return http.get<Array<ItemData>>(`${path}?sys_id=${unique}`);
   }
 

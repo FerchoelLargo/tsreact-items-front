@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, ModalHeader, ModalBody, Spinner } from "reactstrap";
+import { Modal, ModalBody, Spinner } from "reactstrap";
 
 type ModalLoadingProps = {
   visible:boolean,

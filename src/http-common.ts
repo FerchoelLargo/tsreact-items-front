@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const root_rest = "http://localhost:8000/rest/";//{process.env.REACT_APP_INDEX_ITEMS_API};
+const root_rest = "http://localhost:8000/rest/";
 
 export default axios.create({
   baseURL: root_rest,

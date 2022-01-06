@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Input, Label, Col, NavLink } from "reactstrap";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button, } from "reactstrap";
 
-import {ItemData,ItemMetadata} from'./../../models/items.type'
+import {ItemMetadata} from'./../../models/items.type'
 import ItemForm from './item.form'
 
 type ItemPreviewProps = {
